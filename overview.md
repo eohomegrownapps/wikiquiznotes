@@ -26,7 +26,7 @@ multiple choice test[3].
 WikiQuiz is a educational game which tries to generate questions on a topic you
 specify using a matching Wikipedia article. It utilises MediaWiki's API to
 request articles based on a topic (Tues 30/07/14, currently only requests the
-topic, but we hope to later add x-ility to find and use other relevant
+topic, but we hope to later add x-ability to find and use other relevant
 articles), then parses the page and finds facts it can reliably understand,
 which it then forms into questions using the simplenlg library. Each question
 is presented with 3 answers, 1 being the correct one taken from the parsed
