@@ -7,3 +7,4 @@ e.g. The Vikings were Scandinavians
         o Scandinavians
         - Crabs
         - Normans
+--> proper noun database? - other proper nouns / concrete/ abstract... depending
