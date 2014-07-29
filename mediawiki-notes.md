@@ -30,3 +30,5 @@ The result is in JSON, but the article text is formatted in HTML/Wiki markup.
 That's good for us, because it means most of it is plaintext. Also, [[links]]
 are easy to search for, and they might be good targets for "What is?" or
 "Who discovered?" questions.
+
+https://code.google.com/p/simplenlg/wiki/Section6
