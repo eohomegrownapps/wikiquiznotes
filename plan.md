@@ -4,8 +4,6 @@ https://developer.pearson.com/apis/dictionaries/#!/dictionaries/listEntries_get_
 https://code.google.com/p/simplenlg/downloads/list
 http://conjugator.reverso.net/conjugation-english-verb-gone.html
 
-Mon - Beginnings
-Tues - Finish 'to be'
 Wed - expand to other verbs
-Thurs - presentation and UI
+Thurs - presentation
 Fri... bugfixes
