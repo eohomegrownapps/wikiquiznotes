@@ -1,5 +1,7 @@
 - What it does
 - Reason for existence
+- Data sources used
+    - Wikipedia (+ possible lexicons)
 - Tools we used
     - Java, Eclipse, Android SDK
 - 
