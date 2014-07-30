@@ -1,7 +1,8 @@
 Roadplan & presentation notes for WikiQuiz
 ==========================================
 
-This is where the WikiQuiz plans and notes are stored.
+This is where the WikiQuiz presentation is stored, as well as plans and notes
+for the project and presentation.
 
 As a developer, share any ideas to consider and points you want to discuss for
 WikiQuiz here, or any research you've done or just even a link you want
