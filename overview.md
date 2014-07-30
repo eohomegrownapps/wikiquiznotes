@@ -11,7 +11,7 @@ multiple choice test[3].
      the category of 'fun kinda educational things' in the vein of Oregon Trail
      gives us a lot of freedom to be creative rather than make it business-like
      while still appealing to the YRS idea of being actually somewhat useful
-     (maybe :D)
+     (maybe :D).
 
 [2]: 'topic' can include different words (articles) on the same topic, which is
      a sort of stretch goal for us.
@@ -25,14 +25,18 @@ multiple choice test[3].
 
 WikiQuiz is a educational game which tries to generate questions on a topic you
 specify using a matching Wikipedia article. It utilises MediaWiki's API to
-request articles based on a topic (Tues 30/07/14, currently only requests the
-topic, but we hope to later add x-ability to find and use other relevant
-articles), then parses the page and finds facts it can reliably understand,
-which it then forms into questions using the simplenlg library. Each question
-is presented with 3 answers, 1 being the correct one taken from the parsed
-sentence and the other 2 being 'dud' answers, taken from either (!!) our list
-of generic answers, or different sentences in the article.
+request articles based on a topic[1] then parses the page and finds facts it
+can reliably understand, which it forms into questions using the simplenlg
+library (e.g. "The Vikings were Scandinavian seafarers --> What were the
+Vikings?"). Each question is presented with 3 answers, 1 being the correct one
+taken from the parsed sentence and the other 2 being 'dud' answers[2].`
 
+[1]: Tues 30/07/14: currently only requests the topic, but we hope to later add
+     functionality to find and use other relevant articles.
+
+[2]: Taken from either our list of generic answers or different sentences in
+     the article (or similar articles). Does that sound about right? We'll need
+     to make a short list of general (+ funny) answers.
 
 ## Program overview
 
