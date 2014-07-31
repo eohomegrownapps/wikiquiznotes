@@ -7,7 +7,7 @@
 
 usage() {
     cat <<EOF
-Usage: ${0##*/} file [-w width] [-h height] [-o outfile]
+Usage: ${0##*/} [-w width] [-h height] [-o outfile] file
 
 Exports an SVG to a PNG using Inkscape.
 
@@ -23,22 +23,29 @@ EOF
 
 while getopts "x:y:o:h" opt; do
     case $opt in
-        w) # specify width
+        x) # specify width
             width="-w $OPTARG"
             ;;
-        h) # specify height
+        y) # specify height
             height="-h $OPTARG"
             ;;
         o) # specify outfile
             outfile="$OPTARG"
             ;;
+        h) # display usage message
+            usage
+            exit 0
+            ;;
     esac
 done
+
+# reset options (? for getopts)
+shift $(($OPTIND-1))
 
 
 
 if [ -z "$1" ]; then
-    echo "error: argument 1 required"
+    echo "error: file required"
     usage
     exit 1
 fi
@@ -46,18 +53,18 @@ fi
 if [ -f "$1" ]; then
     image="$1"
 else
-    echo "error: argument 1 is not a file"
+    echo "error: not a file"
     usage
     exit 3
 fi
 
 
 
-if [ -z $width ]; then
+if [ -z "$width" ]; then
     echo "${0##*/}: no width specified, not changing from default"
 fi
 
-if [ -z $height ]; then
+if [ -z "$height" ]; then
     echo "${0##*/}: no height specified, not changing from default"
 fi
 
