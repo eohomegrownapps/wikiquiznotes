@@ -7,16 +7,38 @@
 
 usage() {
     cat <<EOF
-Usage: ${0##*/} file width height [outfile]
+Usage: ${0##*/} file [-w width] [-h height] [-o outfile]
 
 Exports an SVG to a PNG using Inkscape.
 
 Output defaults to [file].png (.svg extension removed).
+
+  Options:
+    -x width         specify export width
+    -y height        specify export height
+    -o outfile       specify outfile
+    -h               display this help message
 EOF
 }
 
-if [ $# -lt 3 ]; then
-    echo "error: 3 arguments required"
+while getopts "x:y:o:h" opt; do
+    case $opt in
+        w) # specify width
+            width="-w $OPTARG"
+            ;;
+        h) # specify height
+            height="-h $OPTARG"
+            ;;
+        o) # specify outfile
+            outfile="$OPTARG"
+            ;;
+    esac
+done
+
+
+
+if [ -z "$1" ]; then
+    echo "error: argument 1 required"
     usage
     exit 1
 fi
@@ -29,14 +51,21 @@ else
     exit 3
 fi
 
-width=$2
-height=$3
 
-if [ -n "$4" ]; then
-    outfile="$4"
-else
+
+if [ -z $width ]; then
+    echo "${0##*/}: no width specified, not changing from default"
+fi
+
+if [ -z $height ]; then
+    echo "${0##*/}: no height specified, not changing from default"
+fi
+
+if [ -z $outfile ]; then
     # ${filename%.*} removes the extension (i.e. characters past the last '.')
     outfile="${image%.*}.png"
 fi
 
-inkscape -e "$outfile" -w $width -h $height "$image"
+
+
+inkscape -e "$outfile" $width $height "$image"
