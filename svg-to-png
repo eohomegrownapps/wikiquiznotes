@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#
+# Export an SVG (vector image) to a PNG (raster/'general' image).
+#
+# Requires inkscape.
+#
+
+usage() {
+    cat <<EOF
+Usage: ${0##*/} file width height [outfile]
+
+Exports an SVG to a PNG using Inkscape.
+
+Output defaults to [file].png (.svg extension removed).
+EOF
+}
+
+if [ $# -lt 3 ]; then
+    echo "error: 3 arguments required"
+    usage
+    exit 1
+fi
+
+if [ -f "$1" ]; then
+    image="$1"
+else
+    echo "error: argument 1 is not a file"
+    usage
+    exit 3
+fi
+
+width=$2
+height=$3
+
+if [ -n "$4" ]; then
+    outfile="$4"
+else
+    # ${filename%.*} removes the extension (i.e. characters past the last '.')
+    outfile="${image%.*}.png"
+fi
+
+inkscape -e "$outfile" -w $width -h $height "$image"
