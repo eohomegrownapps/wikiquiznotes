@@ -26,7 +26,7 @@ The program is written in **Java** targeting the **Android** platform.
 
 
 
-View the notes and presentation [here](http://github.com/eogomegrownapps/wikiquiznotes).
+View the notes and presentation [here](http://github.com/eohomegrownapps/wikiquiznotes).
 
 
 
