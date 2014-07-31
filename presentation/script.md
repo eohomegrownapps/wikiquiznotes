@@ -1,8 +1,3 @@
-## Prepared for
-
-    1. Teamwork/
-
-
 # Slides
 1.                   WikiQuiz
 
@@ -19,11 +14,20 @@ simple interface, lead on
        (dark grey) --> http://$lang.wikipedia.org/w/api.php?format=json&action=query&titles=$name&prop=revisions&rvprop=content)
                   ...receive quiz
 
-"We ask the user for two fields: the topic and the language. By default we
-request the English Wikipedia page - so, en.wikipedia.org - that has a title
-matching the topic. We use Wikipedia's API, which is exposed by the wiki
-software that it runs on, MediaWiki.
-This approach allows a good deal of flexibility in our application."
+only 1 field
++ optional language
+use Wikipedia, == MediaWiki
+
+"We ask the user for just one field: the topic they want to generate a quiz on.
+You can also swap the 'language' between the normal English Wikipedia and the
+Simple English Wikipedia. Using those two inputs, we request the Wikipedia page
+that matches the topic.
+We use Wikipedia's API, which is exposed by the wiki software that it runs on,
+MediaWiki. This approach allows a great deal of flexibility in our game: as we
+said, you can choose between 'simple' and 'normal' English Wikipedia, plus
+because the game is able to request and parse data from any MediaWiki site, so
+we could easily add an option to change which wiki site the user wants to
+search."
 
 what it is/does:
     - educational game
