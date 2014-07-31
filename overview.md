@@ -3,7 +3,7 @@
 
 ## Basic description:
 
-WikiQuiz is an educational game[1] which uses a Wikipedia topic[2] to create a
+WikiQuiz is an educational Android game[1] which uses a Wikipedia topic[2] to create a
 multiple choice test[3].
 
 [1]: It's probably not going to be reliable enough to be used as a true
@@ -23,13 +23,14 @@ multiple choice test[3].
 
 ## Detailed description
 
-WikiQuiz is a educational game which tries to generate questions on a topic you
-specify using a matching Wikipedia article. It utilises MediaWiki's API to
-request articles based on a topic[1] then parses the page and finds facts it
-can reliably understand, which it forms into questions using the simplenlg
-library (e.g. "The Vikings were Scandinavian seafarers --> What were the
-Vikings?"). Each question is presented with 3 answers, 1 being the correct one
-taken from the parsed sentence and the other 2 being 'dud' answers[2].`
+WikiQuiz is an educational game which tries to generate questions on a topic
+you specify using a matching Wikipedia article. It utilises MediaWiki's API to
+request an article based on a topic[1] then parses the page to find facts it
+can reliably understand using the Apache OpenNLG library, which it forms into
+questions using the simplenlg library (e.g. "The Vikings were Scandinavian
+seafarers --> What were the Vikings?"). Each question is presented with 3
+answers, 1 being the correct one taken from the parsed sentence and the other 2
+being 'dud' answers.
 
 [1]: Tues 30/07/14: currently only requests the topic, but we hope to later add
      functionality to find and use other relevant articles.
