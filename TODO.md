@@ -16,3 +16,8 @@ http://conjugator.reverso.net/conjugation-english-verb-gone.html
 Wed - expand to other verbs
 Thurs - presentation
 Fri... bugfixes
+
+
+
+GUI:
+    - Able to choose ONLY between simple and en
