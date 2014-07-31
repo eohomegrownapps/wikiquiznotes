@@ -1,1 +1,0 @@
-convert -density 512 -background transparent Wikipedia-logo-v2.svg wiki.png
