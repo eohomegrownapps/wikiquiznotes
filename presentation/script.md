@@ -11,16 +11,19 @@ group intro
 project description
 simple interface, lead on
 
-"The interface is Simple and Clean (Utada Hikaru):"
+"The interface [next slide] is Simple and Clean (Utada Hikaru):"
 
 
 2.                 enter a word
        [image of the entry field with Vikings in]
+       (dark grey) --> http://$lang.wikipedia.org/w/api.php?format=json&action=query&titles=$name&prop=revisions&rvprop=content)
                   ...receive quiz
 
-only one field
-
-"Only one field is required. We request whatever Wikipedia page has that 
+"We ask the user for two fields: the topic and the language. By default we
+request the English Wikipedia page - so, en.wikipedia.org - that has a title
+matching the topic. We use Wikipedia's API, which is exposed by the wiki
+software that it runs on, MediaWiki.
+This approach allows a good deal of flexibility in our application."
 
 what it is/does:
     - educational game
